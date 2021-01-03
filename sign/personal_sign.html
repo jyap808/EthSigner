@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Personal Sign | EthSigner</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.min.js" defer></script>
+    <script src="../assets/js/jquery.scrolly.min.js" defer></script>
+    <script src="../assets/js/jquery.dropotron.min.js" defer></script>
+    <script src="../assets/js/jquery.scrollex.min.js" defer></script>
+    <script src="../assets/js/browser.min.js" defer></script>
+    <script src="../assets/js/breakpoints.min.js" defer></script>
+    <script src="../assets/js/util.js" defer></script>
+    <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/web3.min.js" defer></script>
+    <script src="../assets/js/app.js" defer></script>
+    <script src="../assets/js/personal_sign.js" defer></script>
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <style>
+        .field-icon {
+            float: right;
+            margin-left: -25px;
+            margin-top: -25px;
+            position: relative !;
+            z-index: 2;
+        }
+    </style>
+    <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <h1 id="logo"><a href="../index.html">EthSigner</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li>
+                        <a href="#">Sign</a>
+                        <ul>
+                            <li><a href="./eth_sign.html">Eth Sign</a></li>
+                            <li>
+                                <a href="#">Personal</a>
+                                <ul>
+                                    <li><a href="./personal_sign.html">Personal Sign</a></li>
+                                    <li><a href="./personal_recover.html">Personal Recover</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./signTypedData_v1.html">Sign Typed Data V1</a></li>
+                            <li><a href="./signTypedData_v3.html">Sign Typed Data V3</a></li>
+                            <li><a href="./signTypedData_v4.html">Sign Typed Data V4</a></li>
+                        </ul>
+                    </li>
+                    <li onclick="connectWallet();"><a id="walletStatus" href="#" class="button primary">Connect</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <div id="main" class="wrapper style1">
+            <div class="container">
+                <header class="major">
+                    <h2>Personal Sign</h2>
+                    <p>Same semantics as <em>eth_sign</em> but also accepts a password</p>
+                </header>
+
+                <!-- Form -->
+                <section id="content">
+                    <form name="personal_sign" id="personal_sign">
+                        <h3>Introduction</h3>
+                        <blockquote><em>personal_sign</em> method calculates an Ethereum specific signature adding a prefix to the message. Its also able to display human readable text making it a popular choice for site logins.
+                        </blockquote>
+                        <div class="row gtr-uniform gtr-50">
+                            <div class="col-12">
+                                <textarea name="message" id="message" placeholder="Enter Your Message" rows="6" required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <input id="passphrase" type="password" name="passphrase" value="" placeholder="Enter Your Passphrase">
+                                <span toggle="#passphrase" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                            </div>
+                            <div class="col-12">
+                                <ul class="actions">
+                                    <li><input type="submit" value="Sign" class="primary" /></li>
+                                    <li><input type="reset" value="Reset" onclick="$('#formResult').hide();" /></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- Signature -->
+                <section id="formResultSection">
+                    <div id="formResult" hidden>
+                        <h3>Signature</h3>
+                        <pre><code id="signature"></code></pre>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+                <li><a href="https://github.com/REVOtic/EthSigner" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="mailto:social@revoticengineering.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+            <ul class="copyright">
+                <li>&copy; 2021 REVOtic Engineering Pvt Ltd. All rights reserved.</li>
+            </ul>
+        </footer>
+
+    </div>
+</body>
+
+</html>
