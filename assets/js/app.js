@@ -1,7 +1,6 @@
 // Inject our version of web3.js into the DApp.
 window.addEventListener('load', async() => {
-    // $('#main-popup').modal('show');
-    console.log("Welcome to EthSigner");
+    console.log("Welcome to Ubiq Signer");
     await connectWallet();
 });
 let coinbase;

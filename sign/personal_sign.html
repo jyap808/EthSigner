@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Personal Sign | EthSigner</title>
+    <title>Sign | Ubiq Signer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
@@ -37,26 +37,12 @@
 
         <!-- Header -->
         <header id="header">
-            <h1 id="logo"><a href="../index.html">EthSigner</a></h1>
+            <h1 id="logo"><a href="../index.html">Ubiq Signer</a></h1>
             <nav id="nav">
                 <ul>
                     <li><a href="../index.html">Home</a></li>
-                    <li>
-                        <a href="#">Sign</a>
-                        <ul>
-                            <li><a href="./eth_sign.html">Eth Sign</a></li>
-                            <li>
-                                <a href="#">Personal</a>
-                                <ul>
-                                    <li><a href="./personal_sign.html">Personal Sign</a></li>
-                                    <li><a href="./personal_recover.html">Personal Recover</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="./signTypedData_v1.html">Sign Typed Data V1</a></li>
-                            <li><a href="./signTypedData_v3.html">Sign Typed Data V3</a></li>
-                            <li><a href="./signTypedData_v4.html">Sign Typed Data V4</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="./personal_sign.html">Sign</a></li>
+                    <li><a href="./personal_recover.html">Verify</a></li>
                     <li onclick="connectWallet();"><a id="walletStatus" href="#" class="button primary">Connect</a></li>
                 </ul>
             </nav>
@@ -66,22 +52,18 @@
         <div id="main" class="wrapper style1">
             <div class="container">
                 <header class="major">
-                    <h2>Personal Sign</h2>
-                    <p>Same semantics as <em>eth_sign</em> but also accepts a password</p>
+                    <h2>Sign</h2>
                 </header>
 
                 <!-- Form -->
                 <section id="content">
                     <form name="personal_sign" id="personal_sign">
-                        <h3>Introduction</h3>
-                        <blockquote><em>personal_sign</em> method calculates an Ethereum specific signature adding a prefix to the message. Its also able to display human readable text making it a popular choice for site logins.
-                        </blockquote>
                         <div class="row gtr-uniform gtr-50">
                             <div class="col-12">
                                 <textarea name="message" id="message" placeholder="Enter Your Message" rows="6" required></textarea>
                             </div>
                             <div class="col-12">
-                                <input id="passphrase" type="password" name="passphrase" value="" placeholder="Enter Your Passphrase">
+                                <input id="passphrase" type="password" name="passphrase" value="" placeholder="OPTIONAL: Passphrase">
                                 <span toggle="#passphrase" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                             </div>
                             <div class="col-12">
@@ -108,11 +90,10 @@
         <!-- Footer -->
         <footer id="footer">
             <ul class="icons">
-                <li><a href="https://github.com/REVOtic/EthSigner" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-                <li><a href="mailto:social@revoticengineering.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+                <li><a href="https://github.com/jyap808/UbiqSigner" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
             </ul>
             <ul class="copyright">
-                <li>&copy; 2021 REVOtic Engineering Pvt Ltd. All rights reserved.</li>
+                <li>&copy; 2021</li>
             </ul>
         </footer>
 

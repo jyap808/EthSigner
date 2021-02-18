@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>EthSign</title>
+  <title>Ubiq Sign</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
@@ -31,26 +31,12 @@
 
     <!-- Header -->
     <header id="header">
-      <h1 id="logo"><a href="./index.html">EthSigner</a></h1>
+      <h1 id="logo"><a href="./index.html">Ubiq Signer</a></h1>
       <nav id="nav">
         <ul>
           <li><a href="./index.html">Home</a></li>
-          <li>
-            <a href="#">Sign</a>
-            <ul>
-              <li><a href="./sign/eth_sign.html">Eth Sign</a></li>
-              <li>
-                <a href="#">Personal</a>
-                <ul>
-                  <li><a href="./sign/personal_sign.html">Personal Sign</a></li>
-                  <li><a href="./sign/personal_recover.html">Personal Recover</a></li>
-                </ul>
-              </li>
-              <li><a href="./sign/signTypedData_v1.html">Sign Typed Data V1</a></li>
-              <li><a href="./sign/signTypedData_v3.html">Sign Typed Data V3</a></li>
-              <li><a href="./sign/signTypedData_v4.html">Sign Typed Data V4</a></li>
-            </ul>
-          </li>
+          <li><a href="./sign/personal_sign.html">Sign</a></li>
+          <li><a href="./sign/personal_recover.html">Verify</a></li>
           <li onclick="connectWallet();"><a id="walletStatus" href="#" class="button primary">Connect</a></li>
         </ul>
       </nav>
@@ -60,181 +46,21 @@
     <section id="banner">
       <div class="content">
         <header>
-          <h2>ETH Signer</h2>
-          <p>Sign & Recover Messages.<br />Using an Ethereum Wallet.</p>
+          <h2>Ubiq Signer</h2>
+          <p>Sign & Verify Messages.</p>
         </header>
         <span class="image"><img src="/images/icon-light.png" alt="" /></span>
-      </div>
-      <a href="#one" class="goto-next scrolly">Next</a>
-    </section>
-
-    <!-- One -->
-    <section id="one" class="spotlight style1 bottom">
-      <span class="image fit main"><img src="images/pic02.jpg" alt="" /></span>
-      <div class="content">
-        <div class="container">
-          <div class="row">
-            <div class="col-4 col-12-medium">
-              <header>
-                <h2>ETH Signer</h2>
-                <p>Verify Yourself using your ETH Wallet.</p>
-              </header>
-            </div>
-            <div class="col-4 col-12-medium">
-              <p>Sometimes, DApps might ask you to sign a message in your wallet to prove that you have access to the private key/the funds and aren’t someone acting fraudulently.</p>
-            </div>
-            <div class="col-4 col-12-medium">
-              <p>ETH Signer can help you in testing the major types of authentication via wallet signature requests & makes it easy to prove you own that account just by signing a piece of data with your private key.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a href="#two" class="goto-next scrolly">Next</a>
-    </section>
-
-    <!-- Two -->
-    <section id="two" class="spotlight style2 right">
-      <span class="image fit main"><img src="./images/pic03.jpg" alt="" /></span>
-      <div class="content">
-        <header>
-          <h2>ETH Sign</h2>
-          <p>An open-ended signing method that allows signing an arbitrary hash</p>
-        </header>
-        <p><em>eth_sign</em> method can be used to sign transactions, or any other data, making it a dangerous phishing risk. Hence, its discouraged to use this method in production.</p>
-        <ul class="actions">
-          <li><a href="./sign/eth_sign.html" class="button">eth_sign</a></li>
-        </ul>
-      </div>
-      <a href="#three" class="goto-next scrolly">Next</a>
-    </section>
-
-    <!-- Three -->
-    <section id="three" class="spotlight style3 left">
-      <span class="image fit main bottom"><img src="./images/pic04.jpg" alt="" /></span>
-      <div class="content">
-        <header>
-          <h2>Personal Sign & Recover</h2>
-          <p>Same semantics as <em>eth_sign</em> but also accepts a password</p>
-        </header>
-        <p>The private key used to sign the hash is temporary unlocked in the scope of the request. <br /> <em>personal_recover</em>, returns the address for the account that created the signature.</p>
-        <ul class="actions">
-          <li><a href="./sign/personal_sign.html" class="button">personal_sign</a></li>
-          <li><a href="./sign/personal_recover.html" class="button">personal_recover</a></li>
-        </ul>
-      </div>
-      <a href="#four" class="goto-next scrolly">Next</a>
-    </section>
-
-    <!-- Four -->
-    <section id="four" class="spotlight style2 right">
-      <span class="image fit main"><img src="./images/pic03.jpg" alt="" /></span>
-      <div class="content">
-        <header>
-          <h2>Sign Typed Data V1</h2>
-          <p>The original state-channel-centric signing method</p>
-        </header>
-        <p><em>signTypedData_v1</em> method also known as <em>signTypedData</em>, originally premiered October 2017, is human readable, cheap to verify on chain and hard to phish signatures.</p>
-        <ul class="actions">
-          <li><a href="./sign/signTypedData_v1.html" class="button">signTypedData_v1</a></li>
-        </ul>
-      </div>
-      <a href="#five" class="goto-next scrolly">Next</a>
-    </section>
-
-    <!-- Five -->
-    <section id="five" class="spotlight style3 left">
-      <span class="image fit main bottom"><img src="./images/pic04.jpg" alt="" /></span>
-      <div class="content">
-        <header>
-          <h2>Sign Typed Data V3</h2>
-          <p>Most secure method for signing cheap-to-verify data on-chain</p>
-        </header>
-        <p>The method <em>signTypedData_v3</em> currently represents the latest version of the <strong><a href="https://eips.ethereum.org/EIPS/eip-712" target="_blank">EIP-712</a></strong> spec, making it the most secure method for signing cheap-to-verify
-          data on-chain.</p>
-        <ul class="actions">
-          <li><a href="./sign/signTypedData_v3.html" class="button">signTypedData_v3</a></li>
-        </ul>
-      </div>
-      <a href="#six" class="goto-next scrolly">Next</a>
-    </section>
-
-    <!-- Six -->
-    <section id="six" class="spotlight style2 right">
-      <span class="image fit main"><img src="./images/pic03.jpg" alt="" /></span>
-      <div class="content">
-        <header>
-          <h2>Sign Typed Data V4</h2>
-          <p>Like <em>signTypedData_v3</em> with added support for arrays</p>
-        </header>
-        <p>The method <em>signTypedData_v4</em> currently represents the latest version of the <strong><a href="https://eips.ethereum.org/EIPS/eip-712" target="_blank">EIP-712</a></strong> spec, with added support for arrays and with a breaking fix
-          for the way structs are encoded.</p>
-        <ul class="actions">
-          <li><a href="./sign/signTypedData_v4.html" class="button">signTypedData_v4</a></li>
-        </ul>
-      </div>
-      <a href="#seven" class="goto-next scrolly">Next</a>
-    </section>
-
-    <!-- Seven -->
-    <section id="seven" class="wrapper style1 special fade-up">
-      <div class="container">
-        <header class="major">
-          <h2>Test Wallet Signature Request Messages</h2>
-          <p>Use your ETH Wallet to Instantly Test & Verify The Signatures.</p>
-        </header>
-        <div class="box alt">
-          <div class="row gtr-uniform">
-            <section class="col-4 col-6-medium col-12-xsmall">
-              <span class="icon solid alt major fa-file"></span>
-              <h3>Input Data</h3>
-              <p>Custom Input Supported.</p>
-            </section>
-            <section class="col-4 col-6-medium col-12-xsmall">
-              <span class="icon solid alt major fa-lock"></span>
-              <h3>Secure Signing</h3>
-              <p>Easily Prove your access to the wallet.</p>
-            </section>
-            <section class="col-4 col-6-medium col-12-xsmall">
-              <span class="icon solid alt major fa-check-circle"></span>
-              <h3>Quick Verify</h3>
-              <p>Check signature and message after signing.</p>
-            </section>
-          </div>
-        </div>
-        <!-- <footer class="major">
-                    <ul class="actions special">
-                        <li><a href="#eight" class="button">Learn More</a></li>
-                    </ul>
-                </footer> -->
-      </div>
-    </section>
-
-    <!-- Eight -->
-    <section id="eight" class="wrapper style2 special fade">
-      <div class="container">
-        <header>
-          <h2>Want to Learn More?</h2>
-          <p>Leave your email address and subscribe to our newsletter.</p>
-        </header>
-        <form method="post" action="#" class="cta">
-          <div class="row gtr-uniform gtr-50">
-            <div class="col-8 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Your Email Address" /></div>
-            <div class="col-4 col-12-xsmall"><input type="submit" value="Subscribe" class="fit primary" /></div>
-          </div>
-        </form>
       </div>
     </section>
 
     <!-- Footer -->
     <footer id="footer">
       <ul class="icons">
-        <li><a href="https://github.com/REVOtic/EthSigner" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-        <li><a href="mailto:social@revoticengineering.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-      </ul>
-      <ul class="copyright">
-        <li>&copy; 2021 REVOtic Engineering Pvt Ltd. All rights reserved.</li>
-      </ul>
+        <li><a href="https://github.com/jyap808/UbiqSigner" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; 2021</li>
+    </ul>
     </footer>
 
   </div>
